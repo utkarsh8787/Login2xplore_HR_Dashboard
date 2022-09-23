@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/common.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>mystatus = "in"; myname = "form";</script>
+        <script type="text/javascript" src="resources/js/jpdb-commons.js"></script>
+        <script type="text/javascript" src="resources/js/my-commons.js"></script>
+        <script type="text/javascript" src="resources/js/form.js"></script>
+        <script>checkSession();</script>
+        <style>
+            body {
+                height: max-content;
+            }
+            .form {
+                width: 450px;
+            }
+            
+            .links a {
+                width: 33%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="form">
+            <div class="links">
+                <a class="link" href="home.html"  >Home </a>
+                <a class="link" href="profile.html" >Profile </a>
+                <a class="link" href="login.html" onclick="deleteSession()" id="mylogout" >Logout </a>
+                
+             </div>
+            <div class="title">Add Employee</div>
+            <div class="input-container ic1">
+              <input id="empid" class="input" type="text" placeholder=" " onchange="checkID()">
+              <div class="cut"></div>
+              <label for="empid" class="placeholder">Employee ID</label>
+            </div>
+            <div class="input-container ic2">
+              <input id="empname" class="input" type="text" placeholder=" " >
+              <div class="cut"></div>
+              <label for="empname" class="placeholder">Employee Name</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="empsal" class="input" type="number" placeholder=" " />
+                <div class="cut"></div>
+                <label for="empsal" class="placeholder">Basic Salary</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="hra" class="input" type="number" placeholder=" " />
+                <div class="cut"></div>
+                <label for="hra" class="placeholder">HRA</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="da" class="input" type="number" placeholder=" " />
+                <div class="cut"></div>
+                <label for="da" class="placeholder">DA</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="deduct" class="input" type="number" placeholder=" " />
+                <div class="cut"></div>
+                <label for="deduct" class="placeholder">Deduction</label>
+            </div>
+            <div>
+                <nav class="navbar navbar-default" style="border: none; text-align: center; background-color: #15172b">
+                    <br>
+                    <button type="button" class="btn btn-lg btn-primary" id="new" style="background-color: #08d" onclick="newForm()">New</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="save" style="background-color: #08d" onclick="saveData()" disabled>Save</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="edit" style="background-color: #08d" onclick="editData()" >Edit</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="change" style="background-color: #08d" onclick="changeData()" disabled>Change</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="reset" style="background-color: #08d" onclick="resetForm()" disabled>Reset</button>
+                </nav>
+                <nav class="navbar navbar-default" style="border: none; text-align: center; background-color: #15172b">
+                    <button type="button" class="btn btn-lg btn-primary" id="first" style="background-color: #08d" onclick="getFirst()">First</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="prev" style="background-color: #08d" onclick="getPrev()" >Previous</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="next" style="background-color: #08d" onclick="getNext()" disabled>Next</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="last" style="background-color: #08d" onclick="getLast()">Last</button>
+                </nav>
+            </div>  
+        </div>   
+        
+    </body>
+</html>

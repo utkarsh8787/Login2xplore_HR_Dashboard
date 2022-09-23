@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/common.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            mystatus = "out";
+        </script>
+        <script type="text/javascript" src="resources/js/jpdb-commons.js"></script>
+        <script type="text/javascript" src="resources/js/my-commons.js"></script>
+        <script type="text/javascript" src="resources/js/register.js"></script>
+        <script>checkSession();</script>
+    </head>
+    <body>
+        <div class="form">
+            <div id="links">
+                <a class="link" href="register.html"  > SignUp |</a>
+                <a class="link" href="login.html" > Login</a>
+             </div>
+            <div class="title">Welcome!</div>
+            <div class="input-container ic1">
+              <input id="regname" class="input" type="text" placeholder=" " >
+              <div class="cut"></div>
+              <label for="regname" class="placeholder">Name</label>
+            </div>
+            <div class="input-container ic2">
+                <input type="email" id="regemail" class="input" placeholder=" " onchange="checkEmail()">
+              <div class="cut"></div>
+              <label for="regemail" class="placeholder">Email ID</label>
+            </div>
+            <div class="input-container ic2">
+                <input type="tel" id="regphone" class="input" placeholder=" " onchange="checkPhone()">
+                <div class="cut"></div>
+                <label for="regphone" class="placeholder">Contact No. </label>
+            </div>
+            <div id="myRegFormMsg" class="subtitle"></div>
+            <div class="input-container ic2">
+                <input id="regpwd" class="input" type="password" placeholder=" " >
+                <div class="cut"></div>
+                <label for="regpwd" class="placeholder">Password</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="regpwd1" class="input" type="password" placeholder=" " >
+                <div class="cut"></div>
+                <label for="regpwd1" class="placeholder">Re enter password</label>
+            </div>
+            <button class="submit" id="submit" onclick="saveData()">Register</button>
+            <div id="links">
+                <br>
+                <a class="link" id="reset" onclick="resetLogin()"  > Reset Form</a>
+            </div>
+        </div>
+    </body>
+</html>

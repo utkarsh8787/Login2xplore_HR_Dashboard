@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/common.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>mystatus = "out";</script>
+        <script type="text/javascript" src="resources/js/jpdb-commons.js"></script>
+        <script type="text/javascript" src="resources/js/my-commons.js"></script>
+        <script type="text/javascript" src="resources/js/login.js"></script>
+        <script>checkSession();</script>
+    </head>
+    <body>
+        <div class="form">
+            <div id="links">
+               <a class="link" href="register.html"  > SignUp |</a>
+               <a class="link" href="login.html" > Login</a>
+            </div>
+            <div class="title">Welcome!</div>
+            <div class="input-container ic1">
+              <input id="logemail" class="input" type="email" placeholder=" " >
+              <div class="cut"></div>
+              <label for="logemail" class="placeholder">E-mail ID</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="logpwd" class="input" type="password" placeholder=" " >
+                <div class="cut"></div>
+                <label for="logpwd" class="placeholder">Password</label>
+            </div>
+            <div class="subtitle" id="mymsg"></div>
+            <button type="text" class="submit" id="submit" onclick="checkUser();">Login</button>
+            <div>
+                <br>
+               <a class="link" href="forgot.html" ><center>Forgot Password ?</center></a>
+            </div>
+        </div>
+    </body>
+</html>

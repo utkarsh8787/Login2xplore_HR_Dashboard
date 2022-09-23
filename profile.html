@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/common.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            mystatus = "in";
+            myname = "profile";
+        </script>
+        <script type="text/javascript" src="resources/js/jpdb-commons.js"></script>
+        <script type="text/javascript" src="resources/js/my-commons.js"></script>
+        <script type="text/javascript" src="resources/js/profile.js"></script>
+        <script>checkSession();</script>
+    </head>
+    <body>
+        <div class="form">
+            <div class="links">
+                <a class="link" href="home.html"  >Home </a>
+                <a class="link" href="form.html" >Add Employee </a>
+                <a class="link" href="login.html" onclick="deleteSession()" id="mylogout" >Logout </a>
+                
+             </div>
+            <div class="title">User Profile</div>
+            <div class="input-container ic1">
+              <input id="proname" class="input" type="text" disabled>
+              <div class="cut"></div>
+              <label for="proname" class="placeholder">Name</label>
+            </div>
+            <div class="input-container ic2">
+              <input id="proemail" class="input" type="email" disabled>
+              <div class="cut"></div>
+              <label for="email" class="placeholder">Email ID</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="prophone" class="input" type="tel" disabled>
+                <div class="cut"></div>
+                <label for="contact" class="placeholder">Contact No.</label>
+            </div>
+            <div>
+                <nav class="navbar navbar-default" style="border: none; text-align: center; background-color: #15172b" >
+                    <br>
+                    <button type="button" class="btn btn-lg btn-primary" style="background-color: #08d" id="save" onclick="changeData()" disabled>Save</button>
+                    <button type="button" class="btn btn-lg btn-primary" style="background-color: #08d" id="edit" onclick="enableChange()" >Edit</button>
+                </nav>
+            </div>
+            
+            <a class="link" href="change.html"  ><center> Change Password</center></a>
+        </div>
+        <script>showUser(); </script>
+    </body>
+</html>

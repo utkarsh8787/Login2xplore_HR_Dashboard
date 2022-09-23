@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forgot Password</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/common.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>mystatus = "out";</script>
+        <script type="text/javascript" src="resources/js/jpdb-commons.js"></script>
+        <script type="text/javascript" src="resources/js/my-commons.js"></script>
+        <script type="text/javascript" src="resources/js/forgot.js"></script>
+        <script>checkSession();</script>
+    </head>
+    <body>
+        <div class="form">
+            <div id="links">
+                <a class="link" href="register.html"  > SignUp |</a>
+                <a class="link" href="login.html" > Login</a>
+            </div>
+            <div class="title">Forget Password</div>
+            <div class="input-container ic1">
+              <input id="email" class="input" type="email" placeholder=" " >
+              <div class="cut"></div>
+              <label for="name" class="placeholder">Email ID</label>
+            </div>
+            <button type="text" class="submit" onclick="sendMail()">Send Mail</button>
+        </div>   
+        
+    </body>
+</html>

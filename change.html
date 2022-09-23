@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Password</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/common.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script> mystatus = "in";myname = "change";</script>
+        <script type="text/javascript" src="resources/js/jpdb-commons.js"></script>
+        <script type="text/javascript" src="resources/js/my-commons.js"></script>
+        <script type="text/javascript" src="resources/js/change.js"></script>
+        <script>checkSession();</script>
+    </head>
+    <body>
+        <div class="form">
+            <div class="links">
+                <a class="link" href="home.html"  >Home </a>
+                <a class="link" href="form.html" >Add Employee </a>
+                <a class="link" href="login.html" onclick="deleteSession()" id="mylogout" >Logout </a>
+                
+             </div>
+            <div class="input-container ic1">
+              <input id="oldpwd" class="input" type="password" placeholder=" " />
+              <div class="cut"></div>
+              <label for="oldpwd" class="placeholder">Old Password</label>
+            </div>
+            <div class="input-container ic2">
+              <input id="newpwd" class="input" type="password" placeholder=" " />
+              <div class="cut"></div>
+              <label for="newpwd" class="placeholder">New Password</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="newpwd1" class="input" type="password" placeholder=" " />
+                <div class="cut"></div>
+                <label for="newpwd1" class="placeholder">Re enter password</label>
+            </div>
+            <button type="text" class="submit" onclick="checkPwd()">Change Password</button>
+        </div>
+    </body>
+</html>
